@@ -1,0 +1,26 @@
+{
+  "name": "node_lesson",
+  "version": "1.0.0",
+  "description": "",
+  "main": "intro.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sir-Ob-00/Node_Lesson.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sir-Ob-00/Node_Lesson/issues"
+  },
+  "homepage": "https://github.com/Sir-Ob-00/Node_Lesson#readme",
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "mongoose": "^9.2.1",
+    "nodemon": "^3.1.11"
+  }
+}
