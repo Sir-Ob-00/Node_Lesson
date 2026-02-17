@@ -17,3 +17,14 @@ export const createUser = async(req, res) => {
         res.status(500).json({ message: "Error creating user" });
     }
 };
+
+//READ ALL USERS
+
+export const getUser = async(req, res) => {
+    try{
+        const user = await User.find();
+        res.json(user);
+    }catch(err){
+        res.status(500).json({ message: "Error fetching user" });
+    }
+}
