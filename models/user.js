@@ -2,19 +2,19 @@ import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema({
     username: {
-        type: string,
+        type: String,
         require: true
     }, 
     password: {
-        type: string,
+        type: String,
         require: true
     }, 
     role: {
-        type: string,
+        type: String,
         require: true
     }, 
     email: {
-        type: string,
+        type: String,
         unique: true,
         validate: {
         validator: function(v) {
