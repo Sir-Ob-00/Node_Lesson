@@ -13,7 +13,7 @@ const studentSchema = new mongoose.Schema({
         type: Number, 
         required: true 
     }
-});
+}, { timestamps: true });
 
 // Explicit collection name to match MongoDB
 const Students = mongoose.model("Students", studentSchema, "Students");

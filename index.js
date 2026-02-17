@@ -2,6 +2,8 @@ import express from "express";
 import dotenv from "dotenv";
 import connectDB from "./config/db.js";
 import studentRoute from "./routes/studentRoute.js";
+import userRoute from "./routes/userRoute.js"
+
 
 dotenv.config();
 const app = express();
@@ -9,8 +11,11 @@ const app = express();
 // handles Middleware
 app.use(express.json());
 
-// Routes
+// Routes for students
 app.use("/students", studentRoute);
+
+//Routes for users
+app.use("./user", userRoute)
 
 // Connect to DB and then start server
 const PORT = process.env.PORT || 4000; //
