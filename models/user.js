@@ -1,13 +1,15 @@
 import mongoose from "mongoose";
+import validator from "validator";
+
 
 const userSchema = new mongoose.Schema({
     username: {
         type: String,
-        require: true
+        required: true
     }, 
     password: {
         type: String,
-        require: true
+        required: true
     }, 
     role: {
         type: String,
@@ -17,14 +19,12 @@ const userSchema = new mongoose.Schema({
         type: String,
         unique: true,
         validate: {
-        validator: function(v) {
-            return v.includes("@");
-            },
-        message: "Invalid email format"
+            validator: validator.isEmail,
+            message: "Invalid email format"
         }
     }
 }, {timestamps: true})
 
-const User = mongoose.model("user", userSchema);
+const User = mongoose.model("users", userSchema, "users");
 
 export default User;

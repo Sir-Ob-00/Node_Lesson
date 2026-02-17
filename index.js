@@ -11,11 +11,13 @@ const app = express();
 // handles Middleware
 app.use(express.json());
 
+
+//Routes for users
+app.use("/users", userRoute);
+
 // Routes for students
 app.use("/students", studentRoute);
 
-//Routes for users
-app.use("./user", userRoute)
 
 // Connect to DB and then start server
 const PORT = process.env.PORT || 4000; //
